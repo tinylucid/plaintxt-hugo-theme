@@ -8,10 +8,11 @@
 {{/* List all pages */}}
 <ul>
     {{ range .Paginator.Pages }}
-    <li>
+    <li style="list-style-type:square">
+        {{ .Date | dateFormat "02.01.2006." }} -
         <a href="{{ .RelPermalink }}">
             {{- .Title | markdownify }}
-        </a>
+        </a> 
     </li>
     {{ end }}
 </ul>

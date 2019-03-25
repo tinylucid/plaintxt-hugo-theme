@@ -1,4 +1,7 @@
 {{ block "footer" . }}
 <div class="footer">
+    {{ if ne (relURL .URL) ("/" | safeHTML) }}
+    <a href="/">home</a>
+    {{ end }}
 </div>
 {{ end }}

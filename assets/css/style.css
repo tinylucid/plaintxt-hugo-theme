@@ -44,6 +44,9 @@ img {
     margin-right: auto
 }
 
+.footer {
+    text-align: right;
+}
 article.post {
     font-family: Fira Sans;
     margin-left: 20px;

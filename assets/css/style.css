@@ -91,3 +91,27 @@ pre {
     line-height: 1em;
     padding-bottom: 2em;
 }
+
+@media (max-width: 600px) {
+#container {
+    text-align: left;
+    padding-top: 1em;
+    padding-bottom: 1em
+}
+
+#container div {
+    display: inline;
+    line-height: 1em;
+    text-align: justify;
+    border: 0px;
+    padding-bottom: .1em;
+    border-bottom: 2px solid #e51578;
+}
+
+article.post {
+    font-family: Fira Sans;
+    margin-left: 0px;
+    font-size: 1.2em;
+}
+
+}

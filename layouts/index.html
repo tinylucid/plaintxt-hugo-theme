@@ -8,10 +8,19 @@
 <article>
     {{ .Content }}
 </article>
-<h4> recent posts: </h4>
 <div class="recents">
- {{ range where .Site.Pages "Section" "posts" | first 5}}
-        <ul><a href="{{ .Permalink }}">{{ .Title }}</a><br /></ul>
+<h4> most recent posts: </h4>
+ {{ range first 5 .Pages }}
+ {{ if (ne .Title "about me")}}
+ {{ if (ne .Title "art") }}
+ {{ if (ne .Title "projects") }} 
+    <ul><a href="{{ .Permalink }}">{{ .Date | dateFormat "02.01.2006" }}</a> | {{ .Title }}</ul>
+ {{ end }}
+ {{ end }}
+ {{ end }}
  {{ end }}
 </div>
+
+I like hacking and learning how things work. Mostly interested in <code>systems programming</code>, <code>hardware hacking</code> and <code>information security</code>. While I am away from keyboard I enjoy skating and DJing. I love being creative with technology; mostly involving some kind of <code>creative coding</code> and signal processing.
+
 {{ end }}
